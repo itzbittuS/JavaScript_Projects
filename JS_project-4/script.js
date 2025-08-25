@@ -1,9 +1,14 @@
 // 1. Write a JAVASCRIPT Program to print a greeting message using with argument no return type function when call a function without argument at that time print message Good Morning.
 
-const greet = () => {
-    document.querySelector('.greet').innerHTML = '<h2>Good Morning</h2>';
+const greet = (message) => {
+    if (message == undefined) {
+       document.querySelector('.greet').innerHTML = '<h2>Good Morning</h2>';
+    } else {
+        document.querySelector('.greet').innerHTML =  '<h2>'+ message+ '</h2>';
+    }
 }
 
+greet("hii I am Js");
 greet();
 
 // 2. Write a JAVASCRIPT Program to find Circle area (area = pi*r*r) using return type with argument function.
