@@ -360,20 +360,18 @@ let quotes =  [
 ];
 
 
- let container = document.getElementById("quotes-container");
-
+let container = document.getElementById("quotes-container");
+let str = ' ';
 quotes.forEach((item) => {
-     let card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
+    str += `<div class="card">
         <img src="${item.imgurl}" alt="${item.author}">
         <p class="quote">"${item.quote}"</p>
         <p class="author">${item.author}</p>
         <p class="birthplace"> ${item.birthPlace}</p>
-    `;
-    container.appendChild(card);
-});
+  </div>`
 
+  container.innerHTML = str;
+});
 
 
 
